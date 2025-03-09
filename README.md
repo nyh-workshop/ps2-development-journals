@@ -5,7 +5,7 @@ Here is my (mis)adventures of PS2 development! Writing down whatever I can disco
 ## Docker container deployment
 For the start you need to get Docker, and [pull that container](https://hub.docker.com/r/nyhworkshop/ps2dev) containing the latest PS2SDK (and the other accessories) into your folder.
 
-Then create a workspace folder (for example, E:/ps2dev/workspace for your container, and launch it at the `cmd`:
+Then create a workspace folder (for example, E:/ps2dev/workspace) for your container, and launch it at the `cmd`:
 ```
 docker run -it --mount type=bind,src=E:/ps2dev/workspace,dst=/workspace nyhworkshop/ps2dev
 ```
@@ -29,4 +29,7 @@ Since the PS2 is a more complex gaming console compared to the other older archi
 
 ## Something to keep an eye on!
 - Arranging and sending the packets to the GS is a tricky affair! I spent a lot of time trying to do this! And yes, you **need** to use them a lot if you intend to draw 3D things on the screen! Please start with a `helloTriangle` to see how to send one triangle to the screen.
+
+## Cheat sheet
 - A `qword` is 128-bits long. Vital component in a packet!
+- `GIF_REG_AD` -> A+D refers to the GS' general purpose registers.
